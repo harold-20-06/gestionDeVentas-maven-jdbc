@@ -1,0 +1,52 @@
+# Carpeta target generada por Maven
+/target/
+
+# Archivos y directorios generados por IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+
+# Archivos de configuración local
+/application.properties
+/application.yml
+/database.properties
+
+# Archivos de registros y archivos temporales
+/logs/
+*.log
+*.tmp
+
+# Archivos de Jacoco
+/jacoco.exec
+/jacoco.xml
+
+# Archivos específicos de Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/extensions.xml
+
+# Archivos específicos de PostgreSQL
+#/db/*.sql
+#*.bak
+#*.pg_dump
+
+# Archivos de configuración de PostgreSQL
+/pg_hba.conf
+/postgresql.conf
+
+# Carpeta de entorno virtual de Python (si es aplicable)
+/venv/
+
+# Carpeta de dependencias de Node.js (si es aplicable)
+/node_modules/
+
+# Carpeta de distribución de la aplicación (si es aplicable)
+/dist/
