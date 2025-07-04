@@ -30,6 +30,7 @@ Desarrollar un sistema de gestión de ventas funcional desde consola, que permit
 
 ## ✅ Estructura de codigo
 
+```bash
 gestionDeVentas-maven-jdbc/
 ├── src/
 │   └── main/
@@ -37,28 +38,29 @@ gestionDeVentas-maven-jdbc/
 │           └── com/
 │               └── spectrum/
 │                   └── crudventas/
-│                       ├── appdeconsola/           # Clases con menús y lógica de consola (main)
+│                       ├── appdeconsola/             # Clases con menú principal (main)
 │                       │   └── ConsoleApp.java
-│                       ├── dao/                    # Interfaces e implementaciones JDBC
+│                       ├── dao/                      # Interfaces e implementación JDBC (CRUD)
 │                       │   ├── ClienteDAO.java
-│                       │   └── ClienteDAOImpl.java
+│                       │   ├── ClienteDAOImpl.java
 │                       │   ├── ComercialDAO.java
-│                       │   └── ComercialDAOImpl.java
+│                       │   ├── ComercialDAOImpl.java
 │                       │   ├── PedidoDAO.java
-│                       │   └── PedidoDAOImpl.java                             
-│                       ├── model/                  # Clases de entidad (modelo de datos)
-│                       │   └── Cliente.java
-│                       │   └── Comercial.java
+│                       │   └── PedidoDAOImpl.java
+│                       ├── model/                    # Clases de entidad (modelo de datos)
+│                       │   ├── Cliente.java
+│                       │   ├── Comercial.java
 │                       │   └── Pedido.java
-│                       ├── service/                # Lógica de negocio
-│                       │   └── ClienteService.java
-│                       │   └── ClienteServiceImpl.java
-│                       │   └── ComercialService.java
-│                       │   └── ComercialServiceImpl.java
-│                       │   └── PedidoService.java
+│                       ├── service/                  # Lógica de negocio
+│                       │   ├── ClienteService.java
+│                       │   ├── ClienteServiceImpl.java
+│                       │   ├── ComercialService.java
+│                       │   ├── ComercialServiceImpl.java
+│                       │   ├── PedidoService.java
 │                       │   └── PedidoServiceImpl.java
-│                       └── utilities/              # Utilidades como la conexión a la base de datos
+│                       └── utilities/                # Conexión a la base de datos
 │                           └── BaseDatos.java
+```
 
 
 ## ✅ Descripción de carpetas clave
