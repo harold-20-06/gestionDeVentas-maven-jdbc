@@ -47,7 +47,9 @@ public class ConsoleApp {
             System.out.println("3. Delete Client");
             System.out.println("4. Get All Clients");
             System.out.println("5. search by criteria");
+            System.out.println("6. Get All Clients by letter");
             System.out.println("0. Back");
+
             System.out.print("Enter option: ");
 
             int opcion = scanner.nextInt();
@@ -59,6 +61,7 @@ public class ConsoleApp {
                 case 3 -> deleteCliente();
                 case 4 -> getAllClientes();
                 case 5 -> searchByCriterio();
+                case 6 -> searchByLetter();
                 case 0 -> exit = true;
                 default -> System.out.println("Invalid option. Please enter a valid option.");
             }
@@ -292,6 +295,13 @@ public class ConsoleApp {
         }
         System.out.println("Terminando busquedas por criterio");
 }
+
+    private static void searchByLetter(){
+        System.out.println("Introduzca 1er letra Apellido1 a buscar");
+        String letra = scanner.nextLine();
+        imprimirClientes(clienteService.getClientePorLetra(letra));
+    }
+
 
     private static void menuComerciales() {
         boolean exit = false;

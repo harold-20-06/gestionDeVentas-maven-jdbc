@@ -21,4 +21,5 @@ public interface ClienteService {
     List<Cliente> getClientePorCriterio(String criterio, String valor);
 
     List<Cliente> getClientePorCriterio(String criterio, int valor);
+    List<Cliente> getClientePorLetra(String letra);
 }

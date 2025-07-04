@@ -7,8 +7,8 @@ import java.sql.SQLOutput;
 
 public class BaseDatos {
         private static final String URL = "jdbc:postgresql://localhost:5432/ventas";  //ventas nombre de la DB
-        private static final String USUARIO = "dev";//usuario
-        private static final String CONTRASENA = "password"; //password a la DB
+        private static final String USUARIO = "postgres";//usuario
+        private static final String CONTRASENA = "123456"; //password a la DB
 
         public BaseDatos() {
         // Constructor

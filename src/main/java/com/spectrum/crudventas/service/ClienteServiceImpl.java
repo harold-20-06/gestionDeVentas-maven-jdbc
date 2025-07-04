@@ -163,4 +163,8 @@ public class ClienteServiceImpl implements ClienteService {
         }
         return clienteDao.getClientePorCriterio(criterio,valor);
     }
+
+    public List<Cliente> getClientePorLetra(String letra) {
+        return clienteDao.getClientePorLetra(letra);
+    }
 }

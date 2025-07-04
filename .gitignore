@@ -50,3 +50,10 @@ buildNumber.properties
 
 # Carpeta de distribución de la aplicación (si es aplicable)
 /dist/
+
+# Archivos específicos de Eclipse
+.project
+.classpath
+.factorypath
+.settings/
+

@@ -208,4 +208,32 @@ public class ClienteDaoImpl implements ClienteDao{
         return clientes;
     }
 
+    public List<Cliente> getClientePorLetra(String letra) {
+        List<Cliente> clientes = new ArrayList<>();
+
+        try (Connection connection = obtenerConexion()) {
+            String query = "SELECT * FROM obtener_clientes_por_letra(?)";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, letra);
+            ResultSet rs = statement.executeQuery();
+
+            while (rs.next()) {
+                Cliente cliente = new Cliente();
+                cliente.setId(rs.getInt("id"));
+                cliente.setNombre(rs.getString("nombre"));
+                cliente.setApellido1(rs.getString("apellido1"));
+                cliente.setApellido2(rs.getString("apellido2"));
+                cliente.setCiudad(rs.getString("ciudad"));
+                cliente.setCategoria(rs.getInt("categoría"));
+                clientes.add(cliente);
+            }
+
+            rs.close();
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return clientes;
+    }
+
 }
